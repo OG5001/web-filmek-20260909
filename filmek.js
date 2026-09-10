@@ -90,4 +90,22 @@ const filmek = [
     "rating": 5
   }
 ];
+const table = document.getElementById('tartalom')
+for (const film of filmek)
+{
+    const ujsor = document.createElement('tr');
+    const td1 = document.createElement('td');
+    td1.innerText = film.title
+    const td2 = document.createElement('td');
+    td2.innerText = film.year
+    const td3 = document.createElement('td');
+    td3.innerText = film.genre
+    const td4 = document.createElement('td');
+    td4.innerText = film.rating
 
+    ujsor.appendChild(td1)
+    ujsor.appendChild(td2)
+    ujsor.appendChild(td3)
+    ujsor.appendChild(td4)
+    table.appendChild(ujsor);
+}
