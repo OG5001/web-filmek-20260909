@@ -127,3 +127,44 @@ for (const film of filmek)
     ujsor.appendChild(td4)
     table.appendChild(ujsor);
 }
+const formatum = document.getElementById('formatum')
+formatum.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const nev = document.getElementById('fname');
+    const ev = document.getElementById('year');
+    const tipus = document.getElementById('genre');
+    const ertekeles = document.getElementById('rating');
+    const ujsor = document.createElement('tr');
+    const td1 = document.createElement('td');
+    td1.innerText = nev.value;
+    const td2 = document.createElement('td');
+    td2.innerText = ev.value;
+    const td3 = document.createElement('td');
+    td3.innerText = tipus.value;
+    const td4 = document.createElement('td');
+    td4.innerText = ertekeles.value;
+   
+    if (td4.innerText == "1" || td4.innerText == "2") {
+      td4.classList.add("low-rating")
+    }
+    if (td4.innerText == "1") {
+      td4.innerText = "⭐"
+    }
+    else if (td4.innerText == "2") {
+      td4.innerText = "⭐⭐"
+    }
+    else if (td4.innerText == "3") {
+      td4.innerText = "⭐⭐⭐"
+    }
+    else if (td4.innerText == "4") {
+      td4.innerText = "⭐⭐⭐⭐"
+    }
+    else {
+      td4.innerText = "⭐⭐⭐⭐⭐"
+    }
+    ujsor.appendChild(td1)
+    ujsor.appendChild(td2)
+    ujsor.appendChild(td3)
+    ujsor.appendChild(td4)
+    table.appendChild(ujsor);
+});
