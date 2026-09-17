@@ -106,8 +106,21 @@ for (const film of filmek)
     if (td4.innerText == "1" || td4.innerText == "2") {
       td4.classList.add("low-rating")
     }
-
-
+    if (td4.innerText == "1") {
+      td4.innerText = "⭐"
+    }
+    else if (td4.innerText == "2") {
+      td4.innerText = "⭐⭐"
+    }
+    else if (td4.innerText == "3") {
+      td4.innerText = "⭐⭐⭐"
+    }
+    else if (td4.innerText == "4") {
+      td4.innerText = "⭐⭐⭐⭐"
+    }
+    else {
+      td4.innerText = "⭐⭐⭐⭐⭐"
+    }
     ujsor.appendChild(td1)
     ujsor.appendChild(td2)
     ujsor.appendChild(td3)
