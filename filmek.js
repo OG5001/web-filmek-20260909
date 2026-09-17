@@ -102,6 +102,11 @@ for (const film of filmek)
     td3.innerText = film.genre
     const td4 = document.createElement('td');
     td4.innerText = film.rating
+   
+    if (td4.innerText == "1" || td4.innerText == "2") {
+      td4.classList.add("low-rating")
+    }
+
 
     ujsor.appendChild(td1)
     ujsor.appendChild(td2)
